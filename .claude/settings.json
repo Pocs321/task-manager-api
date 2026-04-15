@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "npm run *",
+      "npm test *",
+      "npm install",
+      "npx *",
+      "git status",
+      "git diff *",
+      "git log *",
+      "git branch *",
+      "git checkout *",
+      "git add *",
+      "git commit *"
+    ],
+    "deny": [
+      "cat .env*",
+      "read .env*",
+      "git push --force *",
+      "rm -rf *",
+      "npm publish"
+    ]
+  }
+}
