@@ -1,15 +1,22 @@
 ---
-description: Automatically triggered when the user asks to create a new React component, UI element, or page.
+description: Automatically triggered when the user asks to create a new API endpoint, route, service, or Terraform module.
 ---
 
 # New Component Skill
 
-When creating a new component:
+When creating a new API endpoint:
 
-1. Ask for the component name and purpose if not clear
-2. Check for existing similar components to avoid duplication
-3. Create the component file in the appropriate directory
-4. Use TypeScript with proper prop types defined via an interface
-5. Follow project conventions (functional component, named export, hooks)
-6. Add basic styles using Tailwind CSS
-7. Create a co-located test file with initial test cases
+1. Create route file in src/routes/
+2. Create controller in src/controllers/
+3. Create service with business logic in src/services/
+4. Add Zod validation schema
+5. Add Prisma model if new entity needed
+6. Register route in the main app
+7. Write tests with Jest + Supertest
+
+When creating a new Terraform module:
+
+1. Create module directory in infra/modules/
+2. Add main.tf, variables.tf, outputs.tf
+3. Tag all resources
+4. Reference from root main.tf

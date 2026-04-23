@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx vitest *)",
+      "Bash(rm -rf \"C:/Users/Admin/Downloads/Demo/Project3/src\")",
+      "Bash(mkdir -p \"C:/Users/Admin/Downloads/Demo/Project3/src/routes\" \"C:/Users/Admin/Downloads/Demo/Project3/src/controllers\" \"C:/Users/Admin/Downloads/Demo/Project3/src/services\" \"C:/Users/Admin/Downloads/Demo/Project3/src/middleware\" \"C:/Users/Admin/Downloads/Demo/Project3/src/utils\" \"C:/Users/Admin/Downloads/Demo/Project3/src/config\" \"C:/Users/Admin/Downloads/Demo/Project3/src/__tests__\" \"C:/Users/Admin/Downloads/Demo/Project3/infra/modules/ecs\" \"C:/Users/Admin/Downloads/Demo/Project3/infra/modules/rds\" \"C:/Users/Admin/Downloads/Demo/Project3/infra/modules/alb\" \"C:/Users/Admin/Downloads/Demo/Project3/infra/modules/ecr\" \"C:/Users/Admin/Downloads/Demo/Project3/infra/modules/vpc\" \"C:/Users/Admin/Downloads/Demo/Project3/infra/modules/secrets\" \"C:/Users/Admin/Downloads/Demo/Project3/infra/environments\" \"C:/Users/Admin/Downloads/Demo/Project3/.github/workflows\" \"C:/Users/Admin/Downloads/Demo/Project3/prisma\")",
+      "Bash(grapuco ingest *)",
+      "Skill(update-config)",
+      "Bash(gh auth *)"
+    ]
+  }
+}

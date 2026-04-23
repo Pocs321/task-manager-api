@@ -1,24 +1,41 @@
 {
   "permissions": {
     "allow": [
-      "npm run *",
-      "npm test *",
-      "npm install",
-      "npx *",
-      "git status",
-      "git diff *",
-      "git log *",
-      "git branch *",
-      "git checkout *",
-      "git add *",
-      "git commit *"
+      "Bash(npm run *)",
+      "Bash(npm test *)",
+      "Bash(npm install *)",
+      "Bash(npx *)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git branch *)",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(docker build *)",
+      "Bash(docker compose *)",
+      "Bash(docker images *)",
+      "Bash(docker ps *)",
+      "Bash(terraform init)",
+      "Bash(terraform plan *)",
+      "Bash(terraform fmt *)",
+      "Bash(terraform validate)",
+      "Bash(aws ecs describe-*)",
+      "Bash(aws ecr describe-*)",
+      "Bash(aws rds describe-*)",
+      "Bash(aws logs get-*)"
     ],
     "deny": [
-      "cat .env*",
-      "read .env*",
-      "git push --force *",
-      "rm -rf *",
-      "npm publish"
+      "Bash(cat .env*)",
+      "Read(.env*)",
+      "Bash(cat *.tfvars)",
+      "Bash(git push --force *)",
+      "Bash(rm -rf *)",
+      "Bash(npm publish)",
+      "Bash(terraform destroy *)",
+      "Bash(aws ecs delete-*)",
+      "Bash(aws rds delete-*)",
+      "Bash(aws ecr delete-*)"
     ]
   }
 }

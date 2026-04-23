@@ -1,14 +1,15 @@
 ---
-description: Automatically triggered when the user asks to refactor, simplify, or clean up code. Handles extraction, renaming, restructuring, and dead code removal.
+description: Automatically triggered when the user asks to refactor, simplify, clean up, or reorganize code or infrastructure.
 ---
 
 # Refactor Skill
 
-When refactoring code:
+When refactoring:
 
-1. Read the entire file first to understand the full context
-2. Identify what can be simplified, extracted, or renamed
-3. Make changes incrementally - one logical change at a time
-4. Preserve all existing behavior (no functional changes)
-5. Run tests after refactoring to verify nothing broke
-6. If tests don't exist for the refactored code, suggest adding them
+1. Read the full file to understand context
+2. For API code: extract business logic to services, keep controllers thin
+3. For Terraform: extract repeated patterns into modules
+4. For Docker: optimize layer caching and reduce image size
+5. Make changes incrementally
+6. Preserve all existing behavior
+7. Run tests after refactoring

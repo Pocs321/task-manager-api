@@ -2,12 +2,12 @@
 description: Run tests and analyze results
 ---
 
-Run the test suite and provide a summary of results.
+Run the test suite and provide a summary.
 
 ## Test Output
 
 ```
-$(`npm test -- --reporter=verbose 2>&1 || true`)
+$(`npm test 2>&1 || true`)
 ```
 
 ## Analysis
@@ -15,3 +15,4 @@ $(`npm test -- --reporter=verbose 2>&1 || true`)
 - How many tests passed vs failed?
 - Are there any flaky or skipped tests?
 - Suggest fixes for any failing tests.
+- Are there untested API endpoints?

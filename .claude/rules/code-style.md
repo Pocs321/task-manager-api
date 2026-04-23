@@ -1,6 +1,6 @@
 ---
-description: Code style conventions for all source files
-globs: "src/**/*.{ts,tsx,js,jsx}"
+description: Code style conventions for all TypeScript source files
+globs: "src/**/*.ts"
 ---
 
 # Code Style Rules
@@ -9,9 +9,9 @@ globs: "src/**/*.{ts,tsx,js,jsx}"
 - Use single quotes for strings
 - Always use semicolons
 - Prefer `const` over `let`; never use `var`
-- Use arrow functions for callbacks and inline functions
-- Use template literals over string concatenation
+- Use arrow functions for callbacks
+- Use async/await, never raw callbacks or .then chains
 - Destructure objects and arrays when accessing multiple properties
 - Prefer early returns over deep nesting
-- Maximum line length: 100 characters
 - Use explicit return types on exported functions
+- Keep files under 200 lines — split if larger

@@ -1,14 +1,15 @@
 ---
-description: API layer conventions for service files
-globs: "src/services/**/*.{ts,js}"
+description: REST API conventions for route and controller files
+globs: "src/{routes,controllers}/**/*.ts"
 ---
 
 # API Conventions
 
-- All API calls go through the `services/` layer - never call fetch directly from components
-- Use async/await, not raw Promises
-- Return typed responses; avoid `any`
-- Handle HTTP errors consistently: check `response.ok`, throw on failure
-- Use constants for base URLs and endpoint paths
-- Include proper error messages that can be shown to users
-- Add request/response type definitions in `types/`
+- Use RESTful naming: GET /tasks, POST /tasks, PUT /tasks/:id, DELETE /tasks/:id
+- Return consistent shape: `{ data, error, message }`
+- Use correct status codes: 200 OK, 201 Created, 400 Bad Request, 404 Not Found, 500 Server Error
+- Validate request body with Zod before processing
+- Controllers handle HTTP — no business logic
+- Services handle business logic — no req/res objects
+- Always include error handling middleware
+- Use pagination for list endpoints: `?page=1&limit=20`

@@ -1,16 +1,15 @@
 ---
-description: Testing standards and conventions
-globs: "**/*.{test,spec}.{ts,tsx,js,jsx}"
+description: Testing standards for Jest + Supertest
+globs: "**/*.{test,spec}.ts"
 ---
 
 # Testing Rules
 
-- Write tests for all new features and bug fixes
-- Use `describe` blocks to group related tests
-- Use clear, descriptive test names: `it('should return null when user is not found')`
-- Prefer integration tests over unit tests for components
-- Mock external dependencies (API calls, third-party services), not internal modules
-- Test behavior, not implementation details
-- Aim for meaningful coverage, not 100% line coverage
-- Use `beforeEach` for shared setup; avoid shared mutable state between tests
-- Keep test files next to the source files they test
+- Use Jest + Supertest for API endpoint tests
+- Use `describe` blocks to group by endpoint or feature
+- Clear test names: `it('should return 404 when task not found')`
+- Test all HTTP status codes: 200, 201, 400, 404, 500
+- Test input validation (missing fields, wrong types)
+- Mock external services, but use a real test database when possible
+- Clean up test data in afterEach/afterAll
+- Never depend on test execution order
